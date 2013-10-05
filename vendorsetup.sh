@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo cm_d802-userdebug
+add_lunch_combo cos_d802-userdebug
