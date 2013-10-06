@@ -7,7 +7,7 @@
     },
     {
         "project": "Gerrett84",
-        "repository": "android_kernel_f320k",
+        "repository": "android_kernel_lge_f302k",
         "target_path": "kernel/lge/f320k",
         "branch": "cm-10.2"
     },
