@@ -1,2 +1,2 @@
-android_device_d802
+android_device_lge_d802
 ===================
