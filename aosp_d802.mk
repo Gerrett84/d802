@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, device/lge/d802/full_d802.mk)
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_d802.mk \
-    $(LOCAL_DIR)/custom_d802.mk
+PRODUCT_NAME := aosp_d802
