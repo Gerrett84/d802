@@ -1,26 +1,18 @@
 [
-    {
-        "project": "TeamLGOG",
-        "repository": "android_device_lge_d800-common",
-        "target_path": "device/lge/d800-common",
-        "branch": "cm-10.2"
-    },
-    {
-        "project": "TeamLGOG",
-        "repository": "proprietary_vendor_lge",
-        "target_path": "vendor/lge",
-        "branch": "cm-10.2"
-    },
-    {
-        "project": "TeamLGOG",
-        "repository": "android_vendor_lge_d800-common",
-        "target_path": "vendor/lge/d800-common",
-        "branch": "cm-10.2"
-    },
-    {
-        "project": "Gerrett84",
-        "repository": "android_kernel_lge_f302k",
-        "target_path": "kernel/lge/f320k",
-        "branch": "cm-10.2"
-    }
+ {
+   "repository": "android_device_lge_g2-common",
+   "target_path": "device/lge/g2-common"
+ },
+ {
+   "repository": "android_hardware_qcom_display-mdss",
+   "target_path": "hardware/qcom/display-mdss"
+ },
+ {
+   "repository": "android_hardware_qcom_media-v4l2",
+   "target_path": "hardware/qcom/media-v4l2"
+ },
+ {
+   "repository": "android_kernel_lge_msm8974",
+   "target_path": "kernel/lge/msm8974"
+ }
 ]
