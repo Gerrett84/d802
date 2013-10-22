@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_CONFIG := cyanogenmod_g2-open_com-perf_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_d802_defconfig
 
 G2_DTS_TARGET := msm8974-g2-open_com
 
 # inherit from d800-common
--include device/lge/d800-common/BoardConfigCommon.mk
+-include device/lge/g2-common/BoardConfigCommon.mk
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := d802

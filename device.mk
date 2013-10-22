@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,31 +14,21 @@
 # limitations under the License.
 #
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/lge/d800/d800-vendor.mk)
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
 
-## overlays
-#DEVICE_PACKAGE_OVERLAYS := device/lge/d802/overlay
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
-# Inherit from d800-common
-$(call inherit-product, device/lge/d800-common/g2.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Enable for debugging
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.debuggable=1 \
-    persist.service.adb.enable=1
+PRODUCT_DEVICE := d802
+PRODUCT_NAME := full_d802
+PRODUCT_BRAND := LGE
+PRODUCT_MODEL := LG-D802
+PRODUCT_MANUFACTURER := lge
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
-# Do not power down SIM card when modem is sent to Low Power Mode.
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1
-
-# Telephony Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnCdmaDevice=0 \
-    telephony.lteOnGsmDevice=1 \
-    ro.telephony.default_network=9 \
-    ro.ril.def.preferred.network=9
-
-# These are the hardware-specific features
-PRODUCT_COPY_FILES += \
-   frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/lge/d802/device.mk)
