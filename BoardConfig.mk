@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,11 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_CONFIG := cyanogenmod_g2-open_com-perf_defconfig
+include device/lge/g2-common/BoardConfigCommon.mk
 
-G2_DTS_TARGET := msm8974-g2-open_com
+TARGET_KERNEL_CONFIG := cyanogenmod_d802_defconfig
 
-# inherit from d800-common
--include device/lge/d800-common/BoardConfigCommon.mk
+TARGET_OTA_ASSERT_DEVICE := d802,g2,galbi,d800
 
-# assert
-TARGET_OTA_ASSERT_DEVICE := d802
+G2_DTS_TARGET := msm8974-g2-open_com
 
-# inherit from the proprietary version
--include vendor/lge/d800-common/BoardConfigVendor.mk
