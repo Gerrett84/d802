@@ -15,4 +15,4 @@
 #
 
 add_lunch_combo full_d802-userdebug
-add_lunch combo custom_d802-userdebug
+add_lunch combo omni_d802-userdebug

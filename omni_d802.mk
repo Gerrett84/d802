@@ -17,14 +17,21 @@
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
-# Get the long list of APNs
-PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+#Add omni apns
+PRODUCT_COPY_FILES += \
+vendor/omni/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk) 
+
+# Enhanced NFC
+$(call inherit-product, vendor/omni/config/nfc_enhanced.mk)
+
 PRODUCT_DEVICE := d802
-PRODUCT_NAME := custom_d802
+PRODUCT_NAME := omni_d802
 PRODUCT_BRAND := LGE
 PRODUCT_MODEL := LG-D802
 PRODUCT_MANUFACTURER := LGE
