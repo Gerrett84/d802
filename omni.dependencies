@@ -25,7 +25,7 @@
  },
  {
    "project": "TheMuppets",
-   "repository": "propietary_vendor_lge",
+   "repository": "proprietary_vendor_lge",
    "target_path": "vendor/lge"
    "branch": "cm-10.2"
  }
