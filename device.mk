@@ -21,7 +21,7 @@ $(call inherit-product, device/lge/g2-common/g2.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
+BTARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Omni Packages
@@ -33,5 +33,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.default_network=9
 
 PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+	device/lge/mako/twrp.fstab:root/etc/twrp.fstab
