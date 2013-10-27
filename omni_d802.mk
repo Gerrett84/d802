@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk) 
 
 # Enhanced NFC
-$(call inherit-product, vendor/omni/config/nfc_enhanced.mk)
+#$(call inherit-product, vendor/omni/config/nfc_enhanced.mk)
 
 PRODUCT_DEVICE := d802
 PRODUCT_NAME := omni_d802
