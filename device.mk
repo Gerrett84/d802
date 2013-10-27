@@ -21,7 +21,7 @@ $(call inherit-product, device/lge/g2-common/g2.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Boot animation
-BTARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Omni Packages
