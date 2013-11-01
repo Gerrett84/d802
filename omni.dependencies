@@ -1,9 +1,9 @@
 [
  {
-   "account": "CyanogenMod",
+   "account": "Gerrett84",
    "repository": "android_device_lge_g2-common",
    "target_path": "device/lge/g2-common",
-   "revision": "cm-10.2"
+   "revision": "android-4.3"
  },
  {
    "account": "CyanogenMod",
